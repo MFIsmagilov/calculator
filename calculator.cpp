@@ -1,4 +1,4 @@
-
+﻿
 #include "calculator.h"
 
 extern const unordered_map<char, pair<int, function< double(double, double)>>> operators;

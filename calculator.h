@@ -1,4 +1,4 @@
-#include <string>
+п»ї#include <string>
 #include <stack>
 #include <sstream>
 #include <stdexcept>
@@ -8,25 +8,25 @@
 #include <math.h>
 using namespace std;
 
-#define DIVISION_NULL "деление на ноль :("
+#define DIVISION_NULL "РґРµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ :("
 
-#define SYNTAX_ERROR_EXIT_BRACKET "не хватает закрывающей скобки : index "
+#define SYNTAX_ERROR_EXIT_BRACKET "РЅРµ С…РІР°С‚Р°РµС‚ Р·Р°РєСЂС‹РІР°СЋС‰РµР№ СЃРєРѕР±РєРё : index "
 
-#define SYNTAX_ERROR_UNEXPECTED "не ожиданный символ :  "
+#define SYNTAX_ERROR_UNEXPECTED "РЅРµ РѕР¶РёРґР°РЅРЅС‹Р№ СЃРёРјРІРѕР» :  "
 
-#define SYNTAX_ERROR "некорректный ввод, строка содержит недопустимое выражение "
+#define SYNTAX_ERROR "РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№В РІРІРѕРґ, СЃС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚В РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ "
 
-#define RESULT_ERROR "результат вычисления по модулю больше 10 000 000"
+#define RESULT_ERROR "СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёСЃР»РµРЅРёСЏ РїРѕ РјРѕРґСѓР»СЋ Р±РѕР»СЊС€Рµ 10 000В 000"
 
-#define EXPRESSION_ERROR "пустое выражение"
-#define UNEXPECTED_ENDING "неожиданный конец выражения"
+#define EXPRESSION_ERROR "РїСѓСЃС‚РѕРµ РІС‹СЂР°Р¶РµРЅРёРµ"
+#define UNEXPECTED_ENDING "РЅРµРѕР¶РёРґР°РЅРЅС‹Р№ РєРѕРЅРµС† РІС‹СЂР°Р¶РµРЅРёСЏ"
 #define BIGGER 1e7
 
 #define INFINUM 0.1e-15
 
 #define COUNT_SYMBOL_IN_NUMBER 9 // 12.23 - good; 1.99999956565655 - bad
 #define COUNT_SYMBOL_AFTER_POINT 2
-#define INCORRECT_NUMBER "введено некорректное число: "
+#define INCORRECT_NUMBER "РІРІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ: "
 const unordered_map<char, pair<int, function< double(double, double)>>> operators = {
 	{
 		' ', pair<int, function< double(double, double)>>(0, [](double a, double b) {

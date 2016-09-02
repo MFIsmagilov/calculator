@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include "calculator.h"
 
 using namespace std;
@@ -27,7 +27,7 @@ BOOST_AUTO_TEST_SUITE(TechnicalTaskTest)
     BOOST_AUTO_TEST_CASE(test3){
     setlocale(LC_CTYPE,"Russian");
     string expression = "1.1 + 2.1 + abc";
-    string result_expression = "некорректный ввод, строка содержит недопустимое выражение abc";
+    string result_expression = "РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№В РІРІРѕРґ, СЃС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚В РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ abc";
     ExpressionParser ep(expression);
     try
     {
@@ -94,7 +94,7 @@ BOOST_AUTO_TEST_SUITE(BracketTest)
     }
     BOOST_AUTO_TEST_CASE(test1){
         string expression = "60 + (45.6 + 54";
-        string result_expression = "не хватает закрывающей скобки : index 15";
+        string result_expression = "РЅРµ С…РІР°С‚Р°РµС‚ Р·Р°РєСЂС‹РІР°СЋС‰РµР№ СЃРєРѕР±РєРё : index 15";
         ExpressionParser ep(expression);
         try
         {
@@ -111,7 +111,7 @@ BOOST_AUTO_TEST_SUITE(UnknownSymbolsTest)
     BOOST_AUTO_TEST_CASE(test0_end){
         setlocale(LC_CTYPE,"Russian");
         string expression = "1.1 + 2.1 + a%bc";
-        string result_expression = "некорректный ввод, строка содержит недопустимое выражение a%bc";
+        string result_expression = "РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№В РІРІРѕРґ, СЃС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚В РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ a%bc";
         ExpressionParser ep(expression);
         try
         {
@@ -125,7 +125,7 @@ BOOST_AUTO_TEST_SUITE(UnknownSymbolsTest)
     BOOST_AUTO_TEST_CASE(test1_middle){
         setlocale(LC_CTYPE,"Russian");
         string expression = "1.1 + a%bc + 2.1";
-        string result_expression = "некорректный ввод, строка содержит недопустимое выражение a%bc";
+        string result_expression = "РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№В РІРІРѕРґ, СЃС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚В РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ a%bc";
         ExpressionParser ep(expression);
         try
         {
@@ -139,7 +139,7 @@ BOOST_AUTO_TEST_SUITE(UnknownSymbolsTest)
     BOOST_AUTO_TEST_CASE(test2_begin){
         setlocale(LC_CTYPE,"Russian");
         string expression = "a%bc + 1.1 + 2.1";
-        string result_expression = "некорректный ввод, строка содержит недопустимое выражение a%bc";
+        string result_expression = "РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№В РІРІРѕРґ, СЃС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚В РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ a%bc";
         ExpressionParser ep(expression);
         try
         {
@@ -176,7 +176,7 @@ BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE(AbsTenMillionTest)
     BOOST_AUTO_TEST_CASE(test0){
         string expression = "9999999 + 1111111";
-        string result_expression = "результат вычисления по модулю больше 10 000 000";
+        string result_expression = "СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёСЃР»РµРЅРёСЏ РїРѕ РјРѕРґСѓР»СЋ Р±РѕР»СЊС€Рµ 10 000В 000";
         ExpressionParser ep(expression);
         try
         {
@@ -189,7 +189,7 @@ BOOST_AUTO_TEST_SUITE(AbsTenMillionTest)
     }
     BOOST_AUTO_TEST_CASE(test1){
         string expression = "-9999999 - 1111111";
-        string result_expression = "результат вычисления по модулю больше 10 000 000";
+        string result_expression = "СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёСЃР»РµРЅРёСЏ РїРѕ РјРѕРґСѓР»СЋ Р±РѕР»СЊС€Рµ 10 000В 000";
         ExpressionParser ep(expression);
         try
         {
@@ -205,7 +205,7 @@ BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE(IncorrectNumberTest)
     BOOST_AUTO_TEST_CASE(test0){
         string expression = "12.9999999 + 35.6";
-        string result_expression = "введено некорректное число: 12.9999999";
+        string result_expression = "РІРІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ: 12.9999999";
         ExpressionParser ep(expression);
         try
         {
@@ -218,7 +218,7 @@ BOOST_AUTO_TEST_SUITE(IncorrectNumberTest)
     }
     BOOST_AUTO_TEST_CASE(test1){
         string expression = "123456789.1 + 35.6";
-        string result_expression = "введено некорректное число: 123456789.1";
+        string result_expression = "РІРІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ: 123456789.1";
         ExpressionParser ep(expression);
         try
         {
@@ -234,7 +234,7 @@ BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE(IncorrectExpressionTest)
     BOOST_AUTO_TEST_CASE(test0){
         string expression = "";
-        string result_expression = "пустое выражение";
+        string result_expression = "РїСѓСЃС‚РѕРµ РІС‹СЂР°Р¶РµРЅРёРµ";
 
         try
         {
@@ -248,7 +248,7 @@ BOOST_AUTO_TEST_SUITE(IncorrectExpressionTest)
     }
     BOOST_AUTO_TEST_CASE(test1){
         string expression = "5+";
-        string result_expression = "неожиданный конец выражения";
+        string result_expression = "РЅРµРѕР¶РёРґР°РЅРЅС‹Р№ РєРѕРЅРµС† РІС‹СЂР°Р¶РµРЅРёСЏ";
 
         try
         {
@@ -262,7 +262,7 @@ BOOST_AUTO_TEST_SUITE(IncorrectExpressionTest)
     }
     BOOST_AUTO_TEST_CASE(test2){
         string expression = "         ";
-        string result_expression = "неожиданный конец выражения";
+        string result_expression = "РЅРµРѕР¶РёРґР°РЅРЅС‹Р№ РєРѕРЅРµС† РІС‹СЂР°Р¶РµРЅРёСЏ";
         try
         {
             ExpressionParser ep(expression);
@@ -275,7 +275,7 @@ BOOST_AUTO_TEST_SUITE(IncorrectExpressionTest)
     }
     BOOST_AUTO_TEST_CASE(test3){
         string expression = "molodets";
-        string result_expression = "некорректный ввод, строка содержит недопустимое выражение molodets";
+        string result_expression = "РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№В РІРІРѕРґ, СЃС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚В РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ molodets";
         try
         {
             ExpressionParser ep(expression);
